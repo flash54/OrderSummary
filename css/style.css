@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 24rem;
+}
+
+#cardWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 12px 13px 51px -30px #1f2f56;
+          box-shadow: 12px 13px 51px -30px #1f2f56;
+}
+
+#cardImg img {
+  display: block;
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+#textContent {
+  text-align: center;
+}
+
+#textContent .textHead {
+  margin-block: 2rem 1rem;
+  font-size: 1.5rem;
+}
+
+#textContent .textBody {
+  margin-inline: 3rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 550px) {
+  #textContent .textBody {
+    margin-inline: 3.5rem;
+  }
+}
+
+#plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  border-radius: 1rem;
+  margin: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+#plan .planText {
+  margin-inline: 1.5rem 3rem;
+}
+
+#plan .planText .planHead {
+  color: #1f2f56;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 550px) {
+  #plan .planText .planHead {
+    font-size: 1rem;
+  }
+}
+
+#plan .planText .planBody {
+  color: #7280a7;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 550px) {
+  #plan .planText .planBody {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  #plan .planText {
+    margin-inline: 1.5rem 3.5rem;
+  }
+}
+
+#plan .planLink {
+  font-weight: 700;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+#plan .planLink:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 550px) {
+  #plan {
+    margin: 2rem 2rem 1.5rem 2rem;
+  }
+}
+
+.paymentBtn {
+  background-color: #3829e0;
+  color: #f5f7ff;
+  -webkit-box-shadow: 0px 20px 37px -15px #3829e0;
+          box-shadow: 0px 20px 37px -15px #3829e0;
+  border-radius: 1rem;
+  padding: 1rem 4.3rem;
+}
+
+.paymentBtn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 550px) {
+  .paymentBtn {
+    padding: 1rem 4.9rem;
+  }
+}
+
+.cancelBtn {
+  background: none;
+  color: #7280a7;
+  margin-block: 1.5rem 2rem;
+}
+
+.cancelBtn:hover {
+  color: #1f2f56;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #1f2f56;
+}
+
+.btn {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.top {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.bottom {
+  color: #7280a7;
+  font-weight: 500;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=style.css.map */

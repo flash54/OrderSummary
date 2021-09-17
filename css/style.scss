@@ -1,0 +1,216 @@
+// Colors
+$Paleblue: hsl(225, 100%, 94%);
+$Verypaleblue: hsl(225, 100%, 98%);
+$Darkblue: hsl(223, 47%, 23%);
+
+$Royalblue: hsl(245, 75%, 52%);
+$LightPurple: hsl(224, 23%, 55%);
+
+// Media Query
+$min: 550px;
+
+// CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+//**MAIN
+body{
+    background-color: $Paleblue;
+    background-image: url('../images/pattern-background-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $min) {
+        background-image: url('../images/pattern-background-desktop.svg');
+    }
+}
+
+#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 24rem;
+}
+
+#cardWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 12px 13px 51px -30px $Darkblue;
+}
+
+#cardImg{
+    img{
+        display: block;
+        max-width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+}
+
+#textContent{
+    text-align: center;
+    
+    .textHead{
+        margin-block: 2rem 1rem;
+        font-size: 1.5rem;
+    }
+    .textBody{
+        margin-inline: 3rem;
+        line-height: 1.5rem;
+
+        @media screen and (min-width: $min){
+            margin-inline: 3.5rem;
+        }
+    }
+
+}
+
+#plan{
+    display: flex;
+    align-items: center;
+
+    background-color: $Verypaleblue;
+    border-radius: 1rem;
+
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
+
+    .planText{
+        margin-inline: 1.5rem 3rem;
+
+        .planHead{
+            color: $Darkblue;
+            font-size: 0.8rem;
+
+            @media screen and (min-width: $min){
+                font-size: 1rem;
+            }
+        }
+        .planBody{
+            color: $LightPurple;
+            font-size: 0.7rem;
+
+            @media screen and (min-width: $min){
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (min-width: $min){
+            margin-inline: 1.5rem 3.5rem;
+
+        }
+    }
+
+    .planLink{
+        font-weight: 700;
+        font-size: 0.8rem;
+        opacity: 0.9;
+
+        &:hover{
+            opacity: 0.7;
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (min-width: $min){
+        margin: 2rem 2rem 1.5rem 2rem;
+    }
+}
+
+.paymentBtn{
+    background-color: $Royalblue;
+    color: $Verypaleblue;
+    box-shadow: 0px 20px 37px -15px $Royalblue;
+
+    border-radius: 1rem;
+    padding: 1rem 4.3rem;
+
+
+    &:hover{
+        opacity: 0.7;
+    }
+
+    @media screen and (min-width: $min){
+        padding: 1rem 4.9rem;
+    }
+    
+}
+
+.cancelBtn{
+    background: none;
+    color: $LightPurple;
+
+    margin-block: 1.5rem 2rem;
+
+    &:hover{
+        color: $Darkblue;
+    }
+}
+
+
+
+footer{
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a {
+        color: $Darkblue; 
+    }
+}
+
+// Utilities
+.btn{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.top{
+    color: $Darkblue;
+    font-weight: 900;
+}
+
+.bottom{
+    color: $LightPurple;
+    font-weight: 500;
+    opacity: 0.9;
+}
